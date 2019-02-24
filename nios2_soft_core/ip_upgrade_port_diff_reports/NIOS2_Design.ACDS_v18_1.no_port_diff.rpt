@@ -1,0 +1,23 @@
+IP Ports Diff Report for NIOS2_Design
+Sat Jan 26 20:27:31 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. IP Information
+
+
+
++--------------------------------------------------------------+
+; IP Information                                               ;
++----------------------+---------------------------------------+
+; IP Variation Name    ; NIOS2_Design                          ;
+; Prior Version        ; ACDS_v18.0                            ;
+; New Version          ; ACDS_v18.1                            ;
+; New File             ; NIOS2_Design/synthesis/NIOS2_Design.v ;
+; Has Port Differences ; No                                    ;
++----------------------+---------------------------------------+
+
+

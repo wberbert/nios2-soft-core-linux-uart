@@ -1,0 +1,23 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst NIOS2_Design.timer_0 -pg 1 -lvl 6 -y 270
+preplace inst NIOS2_Design.MMU -pg 1 -lvl 6 -y 30
+preplace inst NIOS2_Design.JTAG -pg 1 -lvl 6 -y 170
+preplace inst NIOS2_Design.SDRAM -pg 1 -lvl 6 -y 570
+preplace inst NIOS2_Design.NIOS2.cpu -pg 1
+preplace inst NIOS2_Design.CLK_50 -pg 1 -lvl 1 -y 650
+preplace inst NIOS2_Design.NIOS2 -pg 1 -lvl 5 -y 460
+preplace inst NIOS2_Design -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst NIOS2_Design.NIOS2.reset_bridge -pg 1
+preplace inst NIOS2_Design.uart -pg 1 -lvl 6 -y 370
+preplace inst NIOS2_Design.NIOS2.clock_bridge -pg 1
+preplace netloc INTERCONNECT<net_container>NIOS2_Design</net_container>(SLAVE)uart.reset,(SLAVE)NIOS2.reset,(MASTER)CLK_50.clk_reset,(MASTER)NIOS2.debug_reset_request,(SLAVE)SDRAM.reset,(SLAVE)MMU.reset2,(SLAVE)JTAG.reset,(SLAVE)timer_0.reset,(SLAVE)MMU.reset1) 1 1 5 NJ 680 NJ 680 NJ 680 1320 600 1870
+preplace netloc EXPORT<net_container>NIOS2_Design</net_container>(SLAVE)CLK_50.clk_in,(SLAVE)NIOS2_Design.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>NIOS2_Design</net_container>(SLAVE)uart.clk,(SLAVE)timer_0.clk,(SLAVE)SDRAM.clk,(SLAVE)MMU.clk2,(SLAVE)JTAG.clk,(MASTER)CLK_50.clk,(SLAVE)NIOS2.clk,(SLAVE)MMU.clk1) 1 1 5 NJ 660 NJ 660 NJ 660 1300 620 1850
+preplace netloc INTERCONNECT<net_container>NIOS2_Design</net_container>(SLAVE)NIOS2.debug_mem_slave,(SLAVE)MMU.s2,(MASTER)NIOS2.data_master,(SLAVE)MMU.s1,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)uart.s1,(MASTER)NIOS2.instruction_master,(SLAVE)SDRAM.s1,(SLAVE)timer_0.s1) 1 4 2 1320 420 1890
+preplace netloc EXPORT<net_container>NIOS2_Design</net_container>(SLAVE)uart.external_connection,(SLAVE)NIOS2_Design.uart_0_external_connection) 1 0 6 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ
+preplace netloc EXPORT<net_container>NIOS2_Design</net_container>(SLAVE)NIOS2_Design.sdram_0_wire,(SLAVE)SDRAM.wire) 1 0 6 NJ 640 NJ 640 NJ 640 NJ 640 NJ 640 NJ
+preplace netloc EXPORT<net_container>NIOS2_Design</net_container>(SLAVE)NIOS2_Design.reset,(SLAVE)CLK_50.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>NIOS2_Design</net_container>(SLAVE)uart.irq,(SLAVE)JTAG.irq,(SLAVE)timer_0.irq,(MASTER)NIOS2.irq) 1 5 1 1910
+levelinfo -pg 1 0 170 2100
+levelinfo -hier NIOS2_Design 180 210 540 910 1280 1610 1940 2090
